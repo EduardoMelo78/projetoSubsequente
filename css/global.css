@@ -1,0 +1,68 @@
+/*cor tema (rosa claro): #fe5cf5
+  cor azul escura: #000041
+  cor azul claro:  #2710f2
+  cor branco:      #ffffff
+  
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Tahoma, sans-serif;
+}
+
+.conteudo-interno-cabecalho{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.navbar{
+
+    background-color: #000041 ;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #2710f2;
+    z-index: 99;
+}
+
+.navbar div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #fe5cf5;
+
+}
+.logo p{
+    color: #ffffff;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.icon-cabecalho{
+    display: flex;
+    align-items: center;
+
+}
+
+.icon-cabecalho img{
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon-cabecalho img:first-child{
+    display: none;
+}
