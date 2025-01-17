@@ -1,0 +1,106 @@
+/*cor tema (rosa claro): #fe5cf5
+  cor azul escura: #000041
+  cor azul claro:  #2710f2
+  cor branco:      #ffffff
+  rosa bebe:       #ffccff
+  
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    border: none;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.navbar {
+    padding: 16px;
+    width: 100%;
+    background-color: #000041;
+    box-shadow: 0px 0px 10px #2710f2;
+
+    /*colocando como fixado no topo*/
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cabecalho {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1300px;
+}
+
+.nome_logo {
+    color: #fe5cf5;
+    margin: 8px 0px 12px 0px;
+    font-size: 28px;
+}
+.nome_logo>p {
+    color: #ffffff;
+    margin: 0px;
+}
+
+nav ul {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+nav ul li {
+    color: #ffffff;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0, 2s;
+    font-weight: bold;
+    margin: 0px 6px;
+}
+
+.ola_perfil {
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ola_perfil p {
+    margin: 2px;
+}
+
+.img_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img_nav img {
+    width: 60px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.botao_menu {
+    display: none;
+}

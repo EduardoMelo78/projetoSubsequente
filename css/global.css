@@ -28,7 +28,6 @@ h1{
 }
 
 .navbar{
-
     background-color: #000041 ;
     padding: 16px;
     position: sticky;
@@ -58,21 +57,6 @@ nav ul{
     align-items: center;
 }
 
-.icon-cabecalho{
-    display: flex;
-    align-items: center;
-
-}
-
-.icon-cabecalho img{
-    width: 40px;
-    cursor: pointer;
-}
-
-.icon-cabecalho img:first-child{
-    margin-right: 16px;
-}
-
 nav ul li{
     color: white;
     margin-right: 22px;
@@ -93,10 +77,25 @@ nav ul li:hover{
     margin-right: 24px;
 }
 
+.icon-cabecalho{
+    display: flex;
+    align-items: center;
+}
+
+.icon-cabecalho img{
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon-cabecalho img:first-child{
+    margin-right: 16px;
+}
+
 .menu-button{
     display: none;
     margin: 15px;
 }
+
 
 header{
     background-image: radial-gradient( #eee, #fe5cf5);

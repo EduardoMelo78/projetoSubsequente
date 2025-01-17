@@ -1,0 +1,34 @@
+@media  (max-width: 800px){
+
+    .nome_logo{
+        font-size: 22px;
+    }
+
+    nav{
+        position: absolute;
+        background-color: #000041;
+        width: 100%;
+        top: 65px;
+        display: none;
+    }
+
+    .show_menu nav{
+        display: block;
+    }
+
+    .botao_menu{
+
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        padding: 5px;
+    }
+
+    
+}
+
