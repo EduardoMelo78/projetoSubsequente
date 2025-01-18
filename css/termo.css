@@ -1,0 +1,112 @@
+*{
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+header{
+    height: 10vh;
+    width: 100%;
+
+    color: white;
+    padding: 16px;
+    background-color: #000041;
+    box-shadow: 0px 0px 10px #2710f2;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nome_logo {
+    color: #fe5cf5;
+    margin: 8px 0px 12px 0px;
+    font-size: 28px;
+    padding-left: 20px;
+}
+.nome_logo>p {
+    color: #ffffff;
+    margin: 0px;
+}
+
+.ir_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    font-size:x-large ;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ir_cadastro:hover{
+    transform: translateY(-4px);
+    font-weight: 600;
+    color: #fe5cf5;
+}
+
+main{
+    max-width: 720px;
+
+    display: flex;
+    flex-direction: column;
+
+    
+    
+}
+
+.topico{
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo{
+    font-size: x-large;
+    margin-bottom: 12px;
+}
+
+.descricao{
+    margin-bottom: 15px;
+}
+
+
+
+.btn_voltar{
+    text-decoration: none;
+
+    width: 30%;
+    text-align: center;
+    background-color: #ffffff;
+    color: #fe5cf5;
+    border: 2px solid #ffccff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+    margin-bottom: 20px;
+}
+
+.btn_voltar:hover{
+    background-color: #fe5cf5;
+    color: #ffffff;
+    font-weight: 700;
+    border: 3px #fe5cf5;
+}

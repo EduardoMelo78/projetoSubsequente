@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Login</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-        <div>Após login será feita autenticação e abrirá a tela home autenticada
-                            <div>Na tela home será mostrada o nome e os pontos do usuario</div>
-                            <div>Ao autenticar será salvo um objeto com dados do usuario 
-                            para caso ele queira fazer updates ou olhar extrato, bem como um token de acesso</div>
+
+    <header>
+        <h1 class="nome_logo">CARINHO
+            <p>Em cada clique</p>
+        </h1>
+
+        <a href="cadastro.html" class="ir_cadastro">Cadastrar-se</a>
+    </header>
+
+    <main>
+        <div class="img_login">
+            <img src="" alt="">
         </div>
-        <button type="button"> <a href="my_home.html">LOGIN</button></a>
+
+        <div class="box_login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input_login">
+                    <label for="usuario">Usuario:</label>
+                    <input type="usuario" id="usuario" name="usuario" required>
+                </div>
+                
+                <div class="input_login">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                
+                <div class="btn_login">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer></footer>
+
+        
 </body>
 </html>

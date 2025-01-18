@@ -1,0 +1,58 @@
+*{
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow:hidden;
+}
+
+
+header{
+    height: 10vh;
+    width: 100%;
+
+    color: white;
+    padding: 16px;
+    background-color: #000041;
+    box-shadow: 0px 0px 10px #2710f2;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome_logo {
+    color: #fe5cf5;
+    margin: 8px 0px 12px 0px;
+    font-size: 28px;
+    padding-left: 20px;
+}
+.nome_logo>p {
+    color: #ffffff;
+    margin: 0px;
+}
+
+.ir_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    font-size:x-large ;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ir_cadastro:hover{
+    transform: translateY(-4px);
+    font-weight: 600;
+    color: #fe5cf5;
+}
