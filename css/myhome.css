@@ -17,6 +17,8 @@ body {
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -136,4 +138,53 @@ nav ul li:hover {
 
 .botao_menu {
     display: none;
+}
+
+.main{
+
+    height:80vh;
+    display: flex;
+}
+
+
+
+
+footer {
+    width: 100%;
+    background-color: #000041;
+    color: #ffffff;
+    padding: 25px 15px; 
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1300px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer_left p {
+    margin: 5px 0; 
+    color: #bbbbbb;
+}
+
+.footer_right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_right a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer_right a:hover {
+    color: #fe5cf5;
+}
+
+.footer_right span {
+    color: #bbbbbb;
 }
