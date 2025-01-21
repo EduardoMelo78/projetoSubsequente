@@ -101,6 +101,39 @@ nav ul li:hover {
     cursor: pointer;
 }
 
+.lista_opcoes {
+    position: absolute;
+    top: 100%;
+    left: 0; /* Alinha à esquerda */
+    background-color: white;
+    border: 1px solid #ccc; /* Borda da lista */
+    border-radius: 5px;
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 10px; /* Espaçamento interno da lista */
+    margin: 0; /* Remove margens padrão */
+    
+    display: none; /* Esconde a lista inicialmente */
+}
+
+.lista_opcoes li {
+    margin: 5px 0; /* Espaçamento entre os itens da lista */
+}
+
+.lista_opcoes li a {
+    text-decoration: none;
+    color: #333; /* Cor do texto dos links */
+}
+
+.opcoes_perfil:hover .lista_opcoes {
+    display: block; /* Mostra a lista ao passar o mouse sobre a imagem */
+    
+}
+
+.lista_opcoes li a:hover{
+    background-color: #fe5cf5;
+    color: white;
+}
+
 .botao_menu {
     display: none;
 }

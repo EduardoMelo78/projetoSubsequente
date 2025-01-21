@@ -177,7 +177,7 @@ body {
     background-color: #ffffff;
     color: #fe5cf5;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 15px;
     font-size: 16px;
     font-weight: 600;
@@ -201,10 +201,14 @@ body {
 }
 
 .termo {
+    width: 35%;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: start;
     flex-direction: row;
+    gap: 5px;
 }
+
 
 .buttons{
     width: 100%;

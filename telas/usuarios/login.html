@@ -1,48 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Login</title>
     <link rel="stylesheet" href="/css/login.css">
 </head>
+
 <body>
 
-    <header>
-        <h1 class="nome_logo">CARINHO
-            <p>Em cada clique</p>
-        </h1>
+    <div class="container">
 
-        <a href="cadastro.html" class="ir_cadastro">Cadastrar-se</a>
-    </header>
+        <div class="box_esquerda">
 
-    <main>
-        <div class="img_login">
-            <img src="" alt="">
+            <h1 class="nome_logo">CARINHO 💖<p>Em cada Clique </p></h1>
+            <p class="mensagem">Faça login ou cadastre-se para começar a usar o nosso carinho de compras.</p>
+            <div class="ir_cadastro"><button><a href="cadastro.html">Cadastrar-se</a></button></div>
+
         </div>
 
-        <div class="box_login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input_login">
-                    <label for="usuario">Usuario:</label>
-                    <input type="usuario" id="usuario" name="usuario" required>
+        <div class="box_direita">
+
+            <div class="header">
+                <h1>Login</h1>
+            </div>
+
+                <div class="login_box">
+                    <div class="mensagem_error">Usuário ou Senha Incorretos</div>
+                    <input type="text" placeholder="Usuário" id="usuario">
+                    <input type="password" placeholder="Senha" id="senha">
+                    <div class="esqueci"><a href="">Esqueci a senha &#128517</a></div>
+                    <button class="btn_entrar"><a href="my_home.html">Entrar</a></button>
                 </div>
-                
-                <div class="input_login">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
-                
-                <div class="btn_login">
-                    <input type="submit" value="Login">
-                </div>
-            </form>
         </div>
-    </main>
-
-    <footer></footer>
-
-        
+    </div>
 </body>
+
 </html>
