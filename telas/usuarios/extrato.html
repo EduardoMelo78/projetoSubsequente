@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aqui terá uma tela com uma lista das compras do usuario.</h1>
+
+
+    <form>
+        <label for="tipoPagamento">Tipo de Pagamento</label>
+        <select id="tipoPagamento" name="tipoPagamento">
+            <option value="PIX">PIX</option>
+            <option value="CARTAO">Cartão</option>  
+            <option value="ESPECIE">Espécie</option>
+        </select>
+
+        <label for="valorReais">Valor em Reais:</label>
+        <input type="number">
+        <label for="valorPontos">Valor em Pontos</label>
+        <input type="number">
+
+    </form>
+
+
+
+    
+    <table border="1">
+        <thead>
+        <tr>
+            <td>Tipo pagamento</td>
+            <td>Valor em Pontos</td>
+            <td>Valor em Reais</td>
+        </tr>
+        
+    </thead>
+    <tbody id="tabela" ></tbody>
+</table>
+
+    
+
+    <script src="extrato.js"></script>
+</body>
+</html>

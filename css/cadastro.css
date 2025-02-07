@@ -219,7 +219,6 @@ body {
 }
 
 
-
 .btn_voltar{
     width: 30%;
     background-color: #ffffff;
@@ -258,3 +257,50 @@ body {
     font-weight: 750;
 }
 
+@media(max-width: 800px) {
+
+    .imagem_cadastro{
+        display: none;
+    }
+
+    body{
+        height: auto;
+    }
+
+    .container{
+        width: 90%;
+        height: 100%;
+    }
+
+    .cadastrar{
+        width: 100%;
+        height: max-content;
+        
+        flex-direction: column ;
+
+        padding: 10px 20px;
+    }
+
+    .btn_continuar{
+        display: none;
+    }
+
+    .pessoal{
+        display: flex;
+    }
+
+    .endereco{
+        display: flex;
+    }
+  
+    .endereco .ir_login{
+        display: none;
+    }
+
+    .btn_voltar{
+        display: none;
+    }
+
+    
+}
+    
