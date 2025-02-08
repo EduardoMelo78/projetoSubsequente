@@ -1,5 +1,6 @@
 package com.projeto.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -15,6 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+
+
 public class Pagamento {
 		
 		@Id
@@ -25,4 +28,8 @@ public class Pagamento {
 		
 		@Enumerated(EnumType.STRING)
 	    private TipoPagamento tipoPagamento;
+		
+		
+
+	 
 }

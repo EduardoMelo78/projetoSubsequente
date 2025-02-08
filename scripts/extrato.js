@@ -35,7 +35,7 @@ function salvar(event){
 
     pagamento = {
         "tipoPagamento": formulario.get("tipoPagamento"),
-        "valorReais": formulario.get("valorReais"),
+        "valorReais": parseFloat(formulario.get("valorReais")),
         "valorPontos": formulario.get("valorPontos")
     }
 
@@ -44,7 +44,7 @@ function salvar(event){
             headers : {'Content-Type' : 'application/json'},
             body : JSON.stringify(pagamento)})
             .then( resposta => {
-            console.log('resposta do Servidor:', resposta);
+            alert('Cadastrado', resposta);
             if(resposta.ok)
                 obterdados()
 })

@@ -13,21 +13,21 @@ import com.projeto.repositories.RepoPagamento;
 public class PagamentoService {
 	
 	 @Autowired
-	    private RepoPagamento pagamentoRepo;
+	    private RepoPagamento repo;
 
 	    public List<Pagamento> listarTodos() {
-	        return pagamentoRepo.findAll();
+	        return repo.findAll();
 	    }
 
 	    public Optional<Pagamento> buscarPorId(Integer id) {
-	        return pagamentoRepo.findById(id);
+	        return repo.findById(id);
 	    }
 
 	    public Pagamento salvar(Pagamento pagamento) {
-	        return pagamentoRepo.save(pagamento);
+	        return repo.save(pagamento);
 	    }
 
 	    public void deletar(Integer id) {
-	        pagamentoRepo.deleteById(id);
+	       repo.deleteById(id);
 	    }
 }

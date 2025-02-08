@@ -59,6 +59,6 @@ public class PagamentoController {
 	@DeleteMapping("/{id}")
 	public String deletar(@PathVariable int id) {
 		service.deletar(id);
-		return "Pessoa de id: "+ id +" deletado com sucesso";
+		return "Pagamento de id: "+ id +" deletado com sucesso";
 	}
 }
