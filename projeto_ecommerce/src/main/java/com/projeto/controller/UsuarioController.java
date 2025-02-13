@@ -17,7 +17,7 @@ import com.projeto.model.Usuario;
 import com.projeto.services.UsuarioService;
 
 @RestController
-@RequestMapping("usuario")
+@RequestMapping("usuarios")
 public class UsuarioController {
 
 		@Autowired
