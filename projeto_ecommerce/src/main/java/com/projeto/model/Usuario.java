@@ -32,7 +32,7 @@ public class Usuario {
 	private String senha;
 	private Boolean adm;
 	
-	@OneToOne (cascade = CascadeType.ALL)
+	@OneToOne (cascade = CascadeType.ALL)m
     @JoinColumn(name = "endereco_id")
 	private Endereco endereco;
 	
