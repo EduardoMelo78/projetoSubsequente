@@ -26,7 +26,7 @@ public class EnderecoController {
 		@Autowired
 		EnderecoService service;
 		
-		@GetMapping("")
+		@GetMapping("") 
 		public List<Endereco> listar(){
 			return service.listarTodos();
 		}

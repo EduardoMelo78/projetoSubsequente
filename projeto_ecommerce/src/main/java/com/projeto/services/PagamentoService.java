@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.projeto.model.Pagamento;
-import com.projeto.repositories.RepoPagamento;
+import com.projeto.repositories.PagamentoRepo;
 
 @Service
 public class PagamentoService {
 	
 	 @Autowired
-	    private RepoPagamento repo;
+	    private PagamentoRepo repo;
 
 	    public List<Pagamento> listarTodos() {
 	        return repo.findAll();

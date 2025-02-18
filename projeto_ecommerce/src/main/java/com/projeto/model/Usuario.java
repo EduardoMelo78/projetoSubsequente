@@ -30,9 +30,8 @@ public class Usuario {
 	private String email;
 	private String usuario;
 	private String senha;
-	private Boolean adm;
 	
-	@OneToOne (cascade = CascadeType.ALL)m
+	@OneToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
 	private Endereco endereco;
 	

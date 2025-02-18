@@ -3,9 +3,9 @@ package com.projeto.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.projeto.model.Pagamento;
+import com.projeto.model.Venda;
 
 @Repository
-public interface RepoPagamento extends JpaRepository<Pagamento, Integer> {
-	
+public interface VendaRepo extends JpaRepository<Venda, Integer> {
+
 }

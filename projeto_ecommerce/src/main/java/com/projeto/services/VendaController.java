@@ -1,4 +1,4 @@
-package com.projeto.controller;
+package com.projeto.services;
 
 import java.util.List;
 
@@ -13,51 +13,48 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projeto.model.Pagamento;
-import com.projeto.services.PagamentoService;
+import com.projeto.model.Venda;
 
 @RestController
-@RequestMapping ("pagamentos")
-public class PagamentoController {
-	
+@RequestMapping("")
+public class VendaController {
+
 	@Autowired
-	PagamentoService service;
+	VendaService service;
 	
 	@GetMapping("")
-	public List<Pagamento> listar() {
+	public List<Venda> listarTodos(){
 		return service.listarTodos();
 	}
 	
-	
-	
 	@GetMapping("/{id}")
-	public ResponseEntity<Pagamento> localizar(@PathVariable int id) {
-		
+	public ResponseEntity<Venda> localizar(@PathVariable int id){
 		return service.buscarPorId(id)
-				.map(ResponseEntity::ok)
-				.orElse(ResponseEntity.notFound().build());
+				.map(ResponseEntity ::ok)
+				.orElse(ResponseEntity.notFound().build());		
 	}
 	
 	@PostMapping("")
-	public Pagamento salvar(@RequestBody Pagamento p) {
-		return service.salvar(p);
+	public Venda salvar(@RequestBody Venda venda) {
+		return service.salvar(venda);
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Pagamento> atualizar(@PathVariable Integer id, @RequestBody Pagamento p ) {
+	public ResponseEntity<Venda> atualizar(@PathVariable int id, @RequestBody Venda venda){
 		return service.buscarPorId(id)
-				.map(existente -> {
-					p.setId(existente.getId());
-					service.salvar(p);
-					return ResponseEntity.ok(p);
-					})
-				.orElse(ResponseEntity.notFound().build());
+		.map(existente -> {
+			venda.setId(existente.getId());
+			service.salvar(venda);
+			return ResponseEntity.ok(venda);
+		})
+		.orElse(ResponseEntity.notFound().build());
 	}
-	
 	
 	@DeleteMapping("/{id}")
 	public String deletar(@PathVariable int id) {
 		service.deletar(id);
-		return "Pagamento de id: "+ id +" deletado com sucesso";
+		return "Venda de ID: " + id + " deletado com sucesso";
 	}
+	
+	
 }
