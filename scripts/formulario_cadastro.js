@@ -46,8 +46,7 @@ function cadastrar(event){
         "dataNascimento": formulario.get("data_nascimento"),
         "usuario" : formulario.get("usuario"),
         "senha" : formulario.get("senha"),
-        "adm" : false,
-        "endereco_id" : {"id" : enderecoCriado.id}
+        "endereco_id" : {"id" : enderecoCriado.get("id"),}
         }
     })
 

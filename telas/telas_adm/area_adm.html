@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/area_adm.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="/telas/usuarios/my_home.html" class="link_header">
+                <h1 class="nome_logo">CARINHO
+                    <p>Em cada clique</p>
+                </h1>
+            </a>
+            <div class="link_header"><a href="/telas/usuarios/my_home.html">Voltar à home</a></div>
+            <div class="logout link_header"><a href="/telas/usuarios/login.html">Sair</a></div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>DEPARTAMENTOS</h1>
+            </div>
+            <div class="botoes">
+                <div class="botao"><a href="/telas/telas_adm/departamento_cadastro.html">Cadastrar</a></div>
+                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
+                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                </div>
+                <div class="botao">Listar</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome</td>
+                        <td>Whatsapp</td>
+                        <td>Apagar</td>
+                        <td>Editar</td>
+                    </tr>
+                </thead>
+                <tbody id="tabela_departamentos"></tbody>
+            </table>
+            <hr>
+        </div>
+
+        <div class="container">
+            <div class="header">
+                <h1>PRODUTOS</h1>
+            </div>
+            <div class="botoes">
+                <div class="botao"><a href="/telas/telas_adm/produto_cadastro.html">Cadastrar</a></div>
+                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
+                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                </div>
+                <div class="botao">Listar</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome departamento</td>
+                        <td>Nome</td>
+                        <td>Valor</td>
+                        <td>Estoque</td>
+                        <td>Apagar</td>
+                        <td>Editar</td>
+                    </tr>
+                </thead>
+                <tbody id="tabela_produtos"></tbody>
+            </table>
+            <hr>
+        </div>
+
+        <p></p>
+        <div class="container">
+            <div class="header">
+                <h1>VENDAS</h1>
+            </div>
+            <div class="botoes">
+                <div class="botao"><a href="/telas/telas_adm/venda_cadastro.html">Cadastrar</a></div>
+                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
+                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                </div>
+                <div class="botao">Listar</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome departamento</td>
+                        <td>Nome Produto</td>
+                        <td>Quantidade</td>
+                        <td>Valor total</td>
+                        <td>Tipo de pagamento</td>
+                        <td>Valor em pontos</td>
+                        <td>Valor em reais</td>
+                        <td>Status</td>
+                        <td>Data</td>
+                        <td>Estoque</td>
+                        <td>Apagar</td>
+                        <td>Editar</td>
+                    </tr>
+                </thead>
+                <tbody id="tabela_vendas"></tbody>
+            </table>
+            <hr>
+        </div>
+
+        <p></p>
+
+
+        <p></p>
+        <div class="container">
+            <div class="header">
+                <h1>USUÁRIOS</h1>
+            </div>
+            <div class="botoes">
+                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
+                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                </div>
+                <div class="botao">Listar</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome</td>
+                        <td>Email</td>
+                        <td>CPF</td>
+                        <td>Whatsapp</td>
+                        <td>Apagar</td>
+                    </tr>
+                </thead>
+                <tbody id="tabela_produtos"></tbody>
+            </table>
+            <hr>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

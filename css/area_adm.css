@@ -1,0 +1,145 @@
+:root {
+    --rosa_claro: #fe5cf5;
+    --azul-escuro: #000041;
+    --azul_claro: #2710f2;
+    --azul_bebe: #b7d5e5;
+    --cor_branco: #ffffff;
+    --rosa_bebe: #ffccff;
+    --cinza : #dddddd;
+}
+
+*{
+
+    box-sizing : border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    border: none;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: var(--azul-escuro);
+
+    
+}
+
+.navbar{
+    padding: 16px;
+    width: 100%;
+    background-color: var(--azul-escuro);
+    box-shadow: 0px 0px 10px var(--azul_claro);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.nome_logo {
+    color: var(--rosa_claro);
+    margin: 8px 0px 12px 0px;
+    font-size: 28px;
+}
+.nome_logo>p {
+    color: #ffffff;
+    margin: 0px;
+}
+
+.link_header{
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link_header a{
+    text-decoration: none;
+    color:var(--cor_branco)
+}
+
+.link_header a:hover{
+    color: var(--rosa_claro);
+    font-weight: 700;
+}
+
+main{
+    width: 80%;
+}
+
+
+.header{
+    color: #000041;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0px;
+}
+
+.botao{
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 25px;
+
+    background-color: var(--rosa_bebe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botao:hover{
+    background-color: var(--rosa_claro);
+}
+.botao a{
+    text-decoration: none;
+    color: black;
+}
+
+.pesquisar{
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 25px;
+    background-color: var(--rosa_bebe);
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.pesquisar img{
+    width: 30px;
+    cursor: pointer;
+}
+.pesquisar img:hover{
+    transform: scale(1.1);
+}
+.pesquisar input{
+    width: 80%;
+    height: 80%;
+    outline: none;
+    border: 0;
+    background-color: var(--rosa_bebe);
+}
+
+hr{
+    width: 100%;
+    border: 1px var(--cinza) solid;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="/css/produto_cadastro.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="/telas/usuarios/my_home.html" class="link_header logo">
+        <h1 class="nome_logo">
+          CARINHO
+          <span>Em cada clique</span>
+        </h1>
+      </a>
+      <div class="link_header">
+        <a href="/telas/telas_adm/area_adm.html">Voltar à área ADM</a>
+      </div>
+      <div class="link_header">
+        <a href="/telas/usuarios/login.html">Sair</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="cadastrar">
+      <form id="form_cadastrar_produto" method="post" action="#">
+        <div class="form_header">
+          <h2>Cadastrar Produtos</h2>
+        </div>
+        <div class="inputs">
+          <div class="input">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="input">
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="5" required>Escreva sua descrição aqui.</textarea>
+          </div>
+          <div class="input">
+            <label for="valor">Valor:</label>
+            <input type="number" step="0.01" id="valor" name="valor" required>
+          </div>
+          <div class="input">
+            <label for="cashback">Cashback:</label>
+            <input type="number" id="cashback" name="cashback" required>
+          </div>
+          <div class="input">
+            <label for="estoque">Quantidade em estoque:</label>
+            <input type="number" id="estoque" name="estoque" required>
+          </div>
+          <div class="input">
+            <label for="data_cadastro">Data de Cadastro:</label>
+            <input type="date" id="data_cadastro" name="data_cadastro" required>
+          </div>
+          <div class="input">
+            <label for="departamento">ID do Departamento:</label>
+            <input type="number" id="departamento" name="departamento" required>
+          </div>
+          <div class="input">
+            <label for="logo">Foto:</label>
+            <input type="file" id="logo" name="logo">
+          </div>
+          <div class="buttons">
+            <button type="submit" class="btn_salvar">Salvar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
