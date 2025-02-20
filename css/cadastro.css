@@ -72,6 +72,17 @@ body {
 
 }
 
+.form_header h1::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: #f9c5f6;
+    margin: 0 auto;
+    position: absolute;
+
+}
+
 
 .ir_login{
     display: flex;
@@ -105,16 +116,7 @@ body {
     font-weight: 600;
 }
 
-.form_header h1::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 5px;
-    background-color: #f9c5f6;
-    margin: 0 auto;
-    position: absolute;
 
-}
 
 .pessoal{
     width: 100%;
