@@ -14,12 +14,12 @@
     <header>
         <div class="navbar">
             <a href="/telas/usuarios/my_home.html" class="link_header">
-                <h1 class="nome_logo">CARINHO
+                <h2 class="nome_logo">CARINHO
                     <p>Em cada clique</p>
-                </h1>
+                </h2>
             </a>
-            <div class="link_header"><a href="/telas/telas_adm/area_adm.html">Voltar à área ADM</a></div>
-            <div class="logout link_header"><a href="/telas/usuarios/login.html">Sair</a></div>
+            <div><a href="/telas/telas_adm/area_adm.html" class="link_header">Voltar à área ADM</a></div>
+            <div class="logout"><a href="/telas/usuarios/login.html" class="link_header">Sair</a></div>
         </div>
     </header>
 
@@ -31,43 +31,38 @@
                     <h2>Cadastrar Departamento</h2>
                 </div>
 
-                <div class="pessoal" id="pessoal">
-
-
-                    <div class="inputs">
-                        <div class="input">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-                        <div class="input">
-                            <label for="descricao">Descrição:</label>
-                            <textarea id="descricao" name="descricao" rows="5" cols="50">Escreva sua descriçao aqui.
+                <div class="inputs">
+                    <div class="input">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="input">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao" rows="5" cols="50">Escreva sua descriçao aqui.
                                 </textarea>
-                        </div>
-
-                        <div class="input">
-                            <label for="whatsapp">Whatsapp:</label>
-                            <input type="url" id="whatsapp" name="whatsapp" required placeholder="Link do whatsapp">
-                        </div>
-
-                        <div class="input">
-                            <label for="usuario">Id do Usuário:</label>
-                            <input type="number" id="usuario" name="usuario" required>
-                        </div>
-
-                        <div class="input">
-                            <label for="logo">Logo:</label>
-                            <input type="file">
-                        </div>
-
-                        <div class="buttons">
-                            <button type="submit" class="btn_salvar">Salvar</button>
-                        </div>
-
                     </div>
 
+                    <div class="input">
+                        <label for="whatsapp">Whatsapp:</label>
+                        <input type="url" id="whatsapp" name="whatsapp" required placeholder="Link do whatsapp">
+                    </div>
+
+                    <div class="input">
+                        <label for="usuario">Id do Usuário:</label>
+                        <input type="number" id="usuario" name="usuario" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="logo">Logo:</label>
+                        <input type="file">
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" class="btn_salvar">Salvar</button>
+                    </div>
 
                 </div>
+
 
             </form>
         </div>

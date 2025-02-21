@@ -2,13 +2,16 @@
     --rosa_claro: #fe5cf5;
     --azul-escuro: #000041;
     --azul_claro: #2710f2;
+    --azul_bebe: #b7d5e5;
     --cor_branco: #ffffff;
     --rosa_bebe: #ffccff;
+    --cinza: #dddddd;
 }
 
-/*cor tema (rosa claro)*/
-
 * {
+    border: none;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 

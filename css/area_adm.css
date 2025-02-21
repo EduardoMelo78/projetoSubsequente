@@ -24,15 +24,13 @@ body {
     align-items: center;
 }
 
-header {
+header{
+    height: 12%;
     width: 100%;
-    background-color: var(--azul-escuro);
-
-    
 }
 
 .navbar{
-    padding: 16px;
+    height: 100%;
     width: 100%;
     background-color: var(--azul-escuro);
     box-shadow: 0px 0px 10px var(--azul_claro);
@@ -41,33 +39,21 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-
-    position: sticky;
-    top: 0;
-    z-index: 99;
 }
 
-.nome_logo {
-    color: var(--rosa_claro);
-    margin: 8px 0px 12px 0px;
-    font-size: 28px;
+.nome_logo p{
+    color: var(--cor_branco);
+    margin: 5px 0px;
 }
-.nome_logo>p {
-    color: #ffffff;
-    margin: 0px;
+.nome_logo{
+    color: #fe5cf5;
 }
 
 .link_header{
-    font-size: 18px;
     text-decoration: none;
-    cursor: pointer;
+    color: var(--cor_branco);
 }
-.link_header a{
-    text-decoration: none;
-    color:var(--cor_branco)
-}
-
-.link_header a:hover{
+.link_header:hover {
     color: var(--rosa_claro);
     font-weight: 700;
 }
@@ -107,6 +93,10 @@ main{
     background-color: var(--rosa_claro);
 }
 .botao a{
+    width: 100%;
+    height: 100%;
+    padding-top: 7px;
+    text-align: center;
     text-decoration: none;
     color: black;
 }

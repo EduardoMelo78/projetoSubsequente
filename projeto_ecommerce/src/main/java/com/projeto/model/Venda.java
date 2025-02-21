@@ -29,10 +29,6 @@ public class Venda {
 	private Date data;
 	private int quantidade;
 	private Double valor;
-	
-	@Enumerated (EnumType.STRING)
-	private Status status;
-	
 	private int pontos_cashback;
 	
 	@OneToOne (cascade = CascadeType.ALL, fetch = FetchType.EAGER)

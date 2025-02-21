@@ -1,24 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/area_adm.css">
     <link rel="stylesheet" href="/css/venda_cadastro.css">
 </head>
+
 <body>
-    <h1>Aqui cadastrarei as Vendas</h1>
 
     <header>
         <div class="navbar">
-        <a href="/telas/usuarios/my_home.html" class="link_header">
-        <h1 class="nome_logo">CARINHO
-            <p>Em cada clique</p>
-        </h1></a>
-        <div class="link_header"><a href="/telas/telas_adm/area_adm.html">Voltar à área ADM</a></div>
-        <div class="logout link_header"><a href="/telas/usuarios/login.html">Sair</a></div>
-    </div>
+            <a href="/telas/usuarios/my_home.html" class="link_header">
+                <h2 class="nome_logo">CARINHO
+                    <p>Em cada clique</p>
+                </h2>
+            </a>
+            <div><a href="/telas/telas_adm/area_adm.html" class="link_header">Voltar à área ADM</a></div>
+            <div class="logout "><a href="/telas/usuarios/login.html" class="link_header">Sair</a></div>
+        </div>
     </header>
+
+    <main>
+        <div class="cadastrar">
+
+            <form id="form_cadastrar_venda">
+                
+                <div class="form_header">
+                    <h2>Cadastrar Venda</h2>
+                </div>
+
+                <div class="inputs">
+
+                    <div class="input">
+                        <label for="id_produto">Id do Produto:</label>
+                        <input type="number" name="id_produto" id="id_produto">
+                    </div>
+                    <div class="input">
+                        <label for="id_usuario">Id Usuário:</label>
+                        <input type="text" name="id_usuario" id="id_usuario">
+                    </div>
+                    <div class="input">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="text" name="quantidade" id="quantidade">
+                    </div>
+                    <div class="input">
+                        <label for="valor">Valor:</label>
+                        <input type="number" step="0.01" name="valor" id="valor">
+                    </div>
+                    <div class="input">
+                        <label for="pontos_cashback">Cashback em Pontos da compra:</label>
+                        <input type="number" name="pontos_cashback" id="pontos_cashback">
+                    </div>
+               
+                    
+                    <div class="input">
+                        <label for="valor_reais">Valor em Reais</label>
+                        <input type="text" name="valor_reais" id="valor_reais">
+                    </div>
+                    <div class="input">
+                        <label for="valor_pontos">Valor em Pontos:</label>
+                        <input type="number" name="valor_pontos" id="valor_pontos">
+                    </div>
+                    <div class="input">
+                        <label for="status">Tipo de Pagamento:</label>
+                        <select id="status" name="status">
+                            <option value="ESPECIE">Espécie</option>
+                            <option value="PIX">Pix</option>
+                            <option value="CARTAO">Cartão</option>
+                        </select>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" class="btn_salvar">Salvar</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+    </main>
 </body>
+
 </html>
