@@ -42,15 +42,15 @@
                     <div class="input">
                         <label for="descricao">Descrição:</label>
                         <textarea id="descricao" name="descricao" rows="5"
-                            required>Escreva sua descrição aqui.</textarea>
+                            required placeholder="Adicione a descrição do Produto"></textarea>
                     </div>
                     <div class="input">
                         <label for="valor">Valor:</label>
                         <input type="number" step="0.01" id="valor" name="valor" required>
                     </div>
                     <div class="input">
-                        <label for="cashback">Cashback:</label>
-                        <input type="number" id="cashback" name="cashback" required>
+                        <label for="cashback">Valor do cashback em pontos:</label>
+                        <input type="number" id="cashback" name="cashback" required placeholder="1 ponto = R$0,01">
                     </div>
                     <div class="input">
                         <label for="estoque">Quantidade em estoque:</label>
@@ -65,8 +65,8 @@
                         <input type="number" id="departamento" name="departamento" required>
                     </div>
                     <div class="input">
-                        <label for="logo">Foto:</label>
-                        <input type="file" id="logo" name="logo">
+                        <label for="Foto">Foto:</label>
+                        <input type="file" id="foto" name="foto" accept="image/*">
                     </div>
                     <div class="buttons">
                         <button type="submit" class="btn_salvar">Salvar</button>
@@ -76,6 +76,8 @@
             </form>
         </div>
     </main>
+
+    <script src="/scripts/cadastrar_produto.js"></script>
 </body>
 
 </html>

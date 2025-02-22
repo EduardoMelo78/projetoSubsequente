@@ -20,6 +20,7 @@ import com.projeto.services.DepartamentoService;
 @RequestMapping("departamentos")
 public class DepartamentoController {
 	
+	
 		@Autowired
 		DepartamentoService service;
 		

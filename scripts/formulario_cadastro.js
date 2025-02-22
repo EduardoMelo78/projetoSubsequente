@@ -18,57 +18,36 @@ function cadastrar(event){
     event.preventDefault();
     const formulario = new FormData(event.target)
 
-    endereco = {
-        "cep" : formulario.get("cep"),
-        "municipio" : formulario.get("cidade"),
-        "bairro" : formulario.get("bairro"),
-        "rua" : formulario.get("rua"),
-        "numero" : formulario.get("numero"),
-        "complemento" : formulario.get("complemento"),
-        "estado" : formulario.get("estado")
-    }
+     usuario = {
+      "nome" : formulario.get("nome"),
+      "cpf" : formulario.get("cpf"),
+      "telefone" : formulario.get("telefone"),
+      "email" : formulario.get("email"),
+      "dataNascimento": formulario.get("data_nascimento"),
+      "usuario" : formulario.get("usuario"),
+      "senha" : formulario.get("senha"),
+      "endereco" : {"cep" : formulario.get("cep"),
+      "municipio" : formulario.get("cidade"),
+      "bairro" : formulario.get("bairro"),
+      "rua" : formulario.get("rua"),
+      "numero" : formulario.get("numero"),
+      "complemento" : formulario.get("complemento"),
+      "estado" : formulario.get("estado")}
+      }
 
-    fetch('http://localhost:8080/enderecos',{
+    fetch('http://localhost:8080/usuarios',{
         method: "POST",
         headers: {'content-type' : 'application/json'},
-        body : JSON.stringify(endereco)})
+        body : JSON.stringify(usuario)})
         .then(resposta => {
             if (!resposta.ok) {
-              throw new Error('Erro ao cadastrar endereço');
+              throw new Error('Erro ao cadastrar usuario');
             }
             return resposta.json();})
-    .then(enderecoCriado => {
-        const usuario = {
-        "nome" : formulario.get("nome"),
-        "cpf" : formulario.get("cpf"),
-        "telefone" : formulario.get("telefone"),
-        "email" : formulario.get("email"),
-        "dataNascimento": formulario.get("data_nascimento"),
-        "usuario" : formulario.get("usuario"),
-        "senha" : formulario.get("senha"),
-        "endereco_id" : {"id" : enderecoCriado.get("id"),}
-        }
-    })
+        .catch(err => console.error(err));
 
-    console.log(JSON.stringify(usuario));
+        window.location.href = "login.html";
 
-    fetch('http://localhost:8080/usuarios', {
-        method: "POST",
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(usuario)
-      })    
-    .then(respostaUsuario => {
-      if (respostaUsuario.ok) {
-        alert("Usuário cadastrado com sucesso!");
-      } else {
-        throw new Error('Erro ao cadastrar usuário');
-      }
-    })
-    .catch(err => console.error(err));
-
-    
-
-    window.location.href = "login.html";
 }
 
 
