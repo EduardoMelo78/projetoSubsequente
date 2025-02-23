@@ -93,12 +93,15 @@ main{
     box-shadow: 0px 0px 25px 5px var(--rosa_claro);
 }
 
+.form_header h2{
+    color: var(--rosa_claro);
+}
 .form_header h2::after {
     content: "";
     display: block;
     width: 80px;
     height: 5px;
-    background-color: #f9c5f6;
+    background-color: var(--azul-escuro);
     margin: 0 auto;
     transform: translateX(-85%);
 }
@@ -167,11 +170,9 @@ main{
     border-radius: 10px;
     transition: border-color 0.3s;
 }
-
 .input textarea:hover {
     background-color: #f6f5fb;
 }
-
 .input textarea:focus {
     border-color: #fe5cf5;
     outline: none;

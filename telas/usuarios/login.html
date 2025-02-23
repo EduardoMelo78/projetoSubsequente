@@ -26,15 +26,17 @@
                 <h1>Login</h1>
             </div>
 
-                <div class="login_box">
+                <form id="login_box">
                     <div class="mensagem_error">Usuário ou Senha Incorretos</div>
-                    <input type="text" placeholder="Usuário" id="usuario">
-                    <input type="password" placeholder="Senha" id="senha">
+                    <input type="text" placeholder="Usuário" id="usuario" name="usuario">
+                    <input type="password" placeholder="Senha" id="senha" name="senha">
                     <div class="esqueci"><a href="">Esqueci a senha &#128517</a></div>
-                    <button class="btn_entrar"><a href="my_home.html">Entrar</a></button>
-                </div>
+                    <button class="btn_entrar" type="submit">Entrar</button>
+                </form>
         </div>
     </div>
+
+    <script src="/scripts/autenticacao.js"></script>
 </body>
 
 </html>

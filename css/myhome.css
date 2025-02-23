@@ -28,12 +28,11 @@ body {
 
 
 .navbar {
-    padding: 16px;
+    padding: 15px;
     width: 100%;
     background-color: var(--azul-escuro);
     box-shadow: 0px 0px 10px var(--azul_claro);
-
-    /*colocando como fixado no topo*/
+    
     position: sticky;
     top: 0;
     z-index: 99;
@@ -105,11 +104,11 @@ nav ul li a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    font-size: small;
+    width: 16%;
 }
 
-.ola_perfil p {
-    margin: 2px;
-}
 
 .img_nav {
     display: flex;
@@ -119,43 +118,46 @@ nav ul li a{
 
 .img_nav img {
     width: 60px;
-    margin-right: 24px;
     cursor: pointer;
 }
 
 .lista_opcoes {
     position: absolute;
     top: 100%;
-    left: -30px; /* Alinha à esquerda */
+    left: -30px; 
     background-color: white;
-    border: 1px solid #ccc; /* Borda da lista */
+    border: 1px solid #ccc; 
     border-radius: 5px;
     width: 130px;
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding: 10px; /* Espaçamento interno da lista */
-    margin: 0; /* Remove margens padrão */
+    list-style-type: none; 
+    padding: 10px;
+    margin: 0;
     
-    display: none; /* Esconde a lista inicialmente */
+    display: none; 
 }
 
 .lista_opcoes li {
-    margin: 5px 0; /* Espaçamento entre os itens da lista */
+    margin: 5px 0; 
     text-align: center;
 }
 
 .lista_opcoes li a {
     text-decoration: none;
-    color: #333; /* Cor do texto dos links */
+    color: #333; 
 }
 
 .opcoes_perfil:hover .lista_opcoes {
-    display: block; /* Mostra a lista ao passar o mouse sobre a imagem */
+    display: block; 
     
 }
 
 .lista_opcoes li a:hover{
     background-color: var(--rosa_claro);
     color: white;
+}
+
+#area_adm{
+    display: none;
 }
 
 .botao_menu {

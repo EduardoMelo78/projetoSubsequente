@@ -12,12 +12,20 @@
         display: none;
     }
 
+    .img_nav{
+        width: 30%
+    }
     .show_menu nav{
         display: block;
     }
 
     .botao_menu{
         display: block;
+    }
+
+    .ola_perfil{
+        width: 30%;
+        font-size: medium;
     }
 
     nav ul{
