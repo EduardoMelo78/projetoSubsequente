@@ -5,18 +5,17 @@ function cadastrar(event){
     event.preventDefault();
     const formulario = new FormData(event.target)
 
+    
+
      venda = {
             "data" : formulario.get("data"),
             "quantidade" :formulario.get("quantidade"),
-            "valor" : formulario.get("valor"),
-            "pontos_cashback" : formulario.get("pontos_cashback"),
+            "valorTotal" : formulario.get("valorTotal"),
+            "data" : formulario.get("data"),
+            "tipoPagamento" : formulario.get("status"),
             "usuario" : {"id" : formulario.get("usuario")},
-            "produto" : {"id" : formulario.get("produto") },
-            "pagamento" : {
-                "valorReais" : formulario.get("valor_reais"),
-                "valorPontos": formulario.get("valor_pontos"),
-                "tipoPagamento" : formulario.get("status")
-            }}
+            "produto" : {"id" : formulario.get("id_produto") }
+            }
 
     fetch('http://localhost:8080/vendas',{
         method: "POST",

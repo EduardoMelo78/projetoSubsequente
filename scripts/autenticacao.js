@@ -26,7 +26,13 @@ function autenticar(event){
                         error.style.display = 'none';
                     }, 5000);
                 }
-            }
+            }else{
+            const error = document.querySelector('.mensagem_error');
+            error.style.display = 'block';
+            setTimeout(() => {
+                error.style.display = 'none';
+            }, 5000);
+        }
         })
     })
 }

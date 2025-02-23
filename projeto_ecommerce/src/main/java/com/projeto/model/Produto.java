@@ -28,7 +28,6 @@ public class Produto {
 	private String nome;
 	private String descricao;
 	private Double valor; 
-	private int cashback;
 	
 	@Lob
 	@Column(columnDefinition = "LONGTEXT")

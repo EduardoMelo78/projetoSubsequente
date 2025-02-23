@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/extrato.css">
 </head>
+
 <body>
-    <h1>Aqui terá uma tela com uma lista das compras do usuario.</h1>
+    <header>
+        <div class="navbar">
+            <a href="/telas/usuarios/my_home.html" class="link_header">
+                <h2 class="nome_logo">CARINHO
+                    <p>Em cada clique</p>
+                </h2>
+            </a>
+            <div><a href="/telas/usuarios/my_home.html" class="link_header">Voltar à HOME</a></div>
+        </div>
+    </header>
 
+    <main>
 
-    <form id="addPagamento">
-        <label for="tipoPagamento">Tipo de Pagamento</label>
-        <select id="tipoPagamento" name="tipoPagamento">
-            <option value="PIX">PIX</option>
-            <option value="CARTAO">Cartão</option>  
-            <option value="ESPECIE">Espécie</option>
-        </select>
-
-        <label for="valorReais">Valor em Reais:</label>
-        <input type="number" step="0.02" name="valorReais">
-        <label for="valorPontos">Valor em Pontos</label>
-        <input type="number" name="valorPontos">
-
-        <button type="submit"> Salvar </button>
-
-    </form>
-
-    
-    <table border="1">
-        <thead>
-        <tr>
-            <td>Tipo pagamento</td>
-            <td>Valor em Pontos</td>
-            <td>Valor em Reais</td>
-        </tr>
+            <div id="box_venda"></div>
         
-    </thead>
-    <tbody id="tabela" ></tbody>
-</table>
 
-    
+    </main>
+
 
     <script src="/scripts/extrato.js"></script>
 </body>
+
 </html>

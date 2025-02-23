@@ -4,6 +4,8 @@ import java.util.Date;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,16 +28,14 @@ public class Venda {
 	private int id;
 	private Date data;
 	private int quantidade;
-	private Double valor;
-	private int pontos_cashback;
+	private Double valorTotal;
+	
+	@Enumerated(EnumType.STRING)
+    private TipoPagamento tipoPagamento;
 	
 	@ManyToOne (cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 	@JoinColumn (name = "usuario_id")
 	private Usuario usuario;
-	
-	@OneToOne (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "pagamento_id")
-	private Pagamento pagamento;
 	
 	@ManyToOne
 	@JoinColumn(name = "produto_id")
