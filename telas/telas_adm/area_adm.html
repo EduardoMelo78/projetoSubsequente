@@ -30,24 +30,18 @@
             <div class="botoes">
                 <div class="botao"><a href="/telas/telas_adm/departamento_cadastro.html">Cadastrar</a></div>
                 <div class="pesquisar"><img src="/img/lupa search.png" alt="">
-                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                    <input type="number" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
                 </div>
-                <div class="botao">Listar</div>
+                <button type="button" class="botao listar_dept" onclick="listar_departamentos()">Listar</button>
+                <button type="button" class="botao deslistar_dept" onclick="deslistar_departamento()">Deslistar</button>
             </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Nome</td>
-                        <td>Whatsapp</td>
-                        <td>Apagar</td>
-                        <td>Editar</td>
-                    </tr>
-                </thead>
+            
+            <table class="tabela">
+                <thead id="header_departamento"></thead>
                 <tbody id="tabela_departamentos"></tbody>
             </table>
             <hr>
+       
         </div>
 
         <div class="container">
@@ -59,21 +53,12 @@
                 <div class="pesquisar"><img src="/img/lupa search.png" alt="">
                     <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
                 </div>
-                <div class="botao">Listar</div>
+                <button type="button" class="botao listar_produtos" onclick="listar_produtos()">Listar</button>
+                <button type="button" class="botao deslistar_produtos" onclick="deslistar_produtos()">Deslistar</button>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Nome departamento</td>
-                        <td>Nome</td>
-                        <td>Valor</td>
-                        <td>Estoque</td>
-                        <td>Apagar</td>
-                        <td>Editar</td>
-                    </tr>
-                </thead>
+            <table class="tabela">
+                <thead id="header_produto"></thead>
                 <tbody id="tabela_produtos"></tbody>
             </table>
             <hr>
@@ -89,27 +74,12 @@
                 <div class="pesquisar"><img src="/img/lupa search.png" alt="">
                     <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
                 </div>
-                <div class="botao">Listar</div>
+                <button type="button" class="botao listar_vendas" onclick="listar_vendas()">Listar</button>
+                <button type="button" class="botao deslistar_vendas" onclick="deslistar_vendas()">Deslistar</button>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Nome departamento</td>
-                        <td>Nome Produto</td>
-                        <td>Quantidade</td>
-                        <td>Valor total</td>
-                        <td>Tipo de pagamento</td>
-                        <td>Valor em pontos</td>
-                        <td>Valor em reais</td>
-                        <td>Status</td>
-                        <td>Data</td>
-                        <td>Estoque</td>
-                        <td>Apagar</td>
-                        <td>Editar</td>
-                    </tr>
-                </thead>
+            <table class="tabela">
+                <thead id="header_venda"></thead>
                 <tbody id="tabela_vendas"></tbody>
             </table>
             <hr>
@@ -127,21 +97,13 @@
                 <div class="pesquisar"><img src="/img/lupa search.png" alt="">
                     <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
                 </div>
-                <div class="botao">Listar</div>
+                <button type="button" class="botao listar_usuarios" onclick="listar_usuarios()">Listar</button>
+                <button type="button" class="botao deslistar_usuarios" onclick="deslistar_usuarios()">Deslistar</button>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Nome</td>
-                        <td>Email</td>
-                        <td>CPF</td>
-                        <td>Whatsapp</td>
-                        <td>Apagar</td>
-                    </tr>
-                </thead>
-                <tbody id="tabela_produtos"></tbody>
+            <table class="tabela">
+                <thead id="header_usuario"></thead>
+                <tbody id="tabela_usuarios"></tbody>
             </table>
             <hr>
         </div>

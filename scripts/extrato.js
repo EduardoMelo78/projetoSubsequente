@@ -22,22 +22,22 @@ function obterdados(){
         `<div class = "venda">
 
          <div class = "mini_box">
-         <div><p class = "p">Id: </p>${venda.id}</div>
-         <div><p class = "p">Data: </p> ${venda.data}</div>
+         <div><span class = "p">Id: </span>${venda.id}</div>
+         <div><span class = "p">Data: </span> ${venda.data}</div>
          </div>
 
          <div class = "mini_box">
-          <div><p class = "p">Nome Produto: </p> ${venda.produto.nome}</div>
-          <div><p class = "p">Quantidade: </p>${venda.quantidade} </div>
+          <div><span class = "p">Nome Produto: </span> ${venda.produto.nome}</div>
+          <div><span class = "p">Quantidade: </span>${venda.quantidade} </div>
          </div>
 
          <div class = "mini_box">
-          <div><p class = "p">Valor Total: </p> ${venda.valorTotal} </div>
-          <div><p class = "p">Tipo de Pagamento: </p> ${venda.tipoPagamento}</div>
+          <div><span class = "p">Valor Total: </span> ${venda.valorTotal} </div>
+          <div><span class = "p">Tipo de Pagamento: </span> ${venda.tipoPagamento}</div>
          </div>
 
          <div class = "mini_box">
-          <div><p class = "p">Departamento: </p> ${venda.produto.departamento.nome}</div>
+          <div><span class = "p">Departamento: </span> ${venda.produto.departamento.nome}</div>
          </div>
 
          </div>

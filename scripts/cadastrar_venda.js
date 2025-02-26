@@ -24,6 +24,7 @@ function cadastrar(event){
         .then(resposta => {
             if (!resposta.ok) {
               throw new Error('Erro ao cadastrar Venda');
+              console.log(resposta)
             }
             return resposta.json();})
         .catch(err => console.error(err));

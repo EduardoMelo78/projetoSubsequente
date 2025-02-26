@@ -25,6 +25,7 @@ public class UsuarioController {
 		
 		@PostMapping
 		public Usuario salvar(@RequestBody Usuario usuario) {
+		
 			return service.salvar(usuario);
 		}
 		

@@ -40,8 +40,9 @@ function cadastrar(event){
               throw new Error('Erro ao cadastrar Departamento');
             }
             return resposta.json();})
+        .then(window.location.href = "/telas/telas_adm/area_adm.html")
         .catch(err => console.error(err));
 
-        window.location.href = "/telas/telas_adm/area_adm.html";
+        
 
 }

@@ -95,10 +95,11 @@ main{
 .botao a{
     width: 100%;
     height: 100%;
-    padding-top: 7px;
+    padding-top: 9px;
     text-align: center;
     text-decoration: none;
     color: black;
+    font-size: small;
 }
 
 .pesquisar{
@@ -132,4 +133,82 @@ main{
 hr{
     width: 100%;
     border: 1px var(--cinza) solid;
+}
+
+/*AREA DA TABELA*/
+
+
+.tabela {
+    width: 100%;
+    max-height: 400px; /* Ajuste essa altura conforme necessário */
+    overflow-y: auto; /* Mostrar barra de rolagem vertical quando necessário */
+    display: block; /* Para que overflow-y funcione corretamente */
+    
+}
+
+.tabela thead {
+    position: sticky; /* Mantém o cabeçalho fixo */
+    top: 0;
+    background-color: #f0f0f0;
+}
+
+.tabela thead td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.tabela tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: small;
+}
+
+.linha_tabela:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.linha_tabela:nth-child(odd) {
+    background-color: #fff;
+}
+
+.tabela img {
+    width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin: auto;
+}
+
+.tabela button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabela button:hover {
+    background-color: #ccc;
+}
+
+.tabela button:active {
+    transform: scale(0.95);
+}
+
+.nenhum{
+    font-weight: 700;
+    color: white;
+    background-color: var(--azul-escuro);
+}
+
+.deslistar_dept{
+    display: none;
+}
+.deslistar_produtos{
+    display: none;
+}
+.deslistar_vendas{
+    display: none;
+}
+.deslistar_usuarios{
+    display: none;
 }
