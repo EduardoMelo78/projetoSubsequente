@@ -115,6 +115,7 @@ main{
     align-items: center;
     justify-content: space-evenly;
 }
+
 .pesquisar img{
     width: 30px;
     cursor: pointer;
@@ -211,4 +212,27 @@ hr{
 }
 .deslistar_usuarios{
     display: none;
+}
+
+.usuarios{
+    padding-bottom: 50px;
+}
+
+.btn{
+    width: 100%;
+    background-color: #ffffff;
+    color: #fe5cf5;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #fe5cf5;
+    color: #ffffff;
+    font-weight: 750;
 }

@@ -7,11 +7,10 @@ function cadastrar(event){
 
     
 
-     venda = {
+     const venda = {
             "data" : formulario.get("data"),
             "quantidade" :formulario.get("quantidade"),
             "valorTotal" : formulario.get("valorTotal"),
-            "data" : formulario.get("data"),
             "tipoPagamento" : formulario.get("status"),
             "usuario" : {"id" : formulario.get("usuario")},
             "produto" : {"id" : formulario.get("id_produto") }

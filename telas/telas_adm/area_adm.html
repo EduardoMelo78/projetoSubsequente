@@ -41,7 +41,7 @@
                 <tbody id="tabela_departamentos"></tbody>
             </table>
             <hr>
-       
+            <script src="/scripts/area_adm_departamento.js"></script>
         </div>
 
         <div class="container">
@@ -89,13 +89,14 @@
 
 
         <p></p>
-        <div class="container">
+        <div class="container usuarios">
             <div class="header">
                 <h1>USUÁRIOS</h1>
             </div>
             <div class="botoes">
-                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
-                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                <div class="pesquisar">
+                    <img src="/img/lupa search.png" alt="" onclick="buscar_usuario_id()">
+                    <input type="number" placeholder="Pesquisar por ID" name="pesquisar_id" id="pesquisar_id">
                 </div>
                 <button type="button" class="botao listar_usuarios" onclick="listar_usuarios()">Listar</button>
                 <button type="button" class="botao deslistar_usuarios" onclick="deslistar_usuarios()">Deslistar</button>
@@ -106,6 +107,8 @@
                 <tbody id="tabela_usuarios"></tbody>
             </table>
             <hr>
+
+            <script src="/scripts/area_adm_usuario.js"></script>
         </div>
 
     </main>

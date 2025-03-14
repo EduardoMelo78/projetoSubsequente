@@ -7,100 +7,7 @@ function deslogar(){
 /*const pesquisar = document.getElementById("pesquisar").value
       console.log(pesquisar)*/
 
-function listar_departamentos() {
-        fetch('http://localhost:8080/departamentos')
-          .then(resposta => resposta.json())
-          .then(departamentos => {
 
-            const header = document.querySelector("#header_departamento");
-            const tabela = document.querySelector("#tabela_departamentos");
-
-            tabela.innerHTML = '';
-            header.innerHTML = ''; 
-
-            if(departamentos.length >0){
-
-                
-            document.querySelector('.listar_dept').style.display = 'none';
-            document.querySelector('.deslistar_dept').style.display = 'block';
-
-                header.innerHTML =
-                ` 
-                    <td>ID</td>
-                      <td>Nome</td>
-                      <td>Descrição</td>
-                      <td>Whatsapp</td>
-                      <td>Usuário responsável:</td>
-                      <td>Ações</td>
-                `
-                console.log(departamentos)
-                }else{
-                    header.innerHTML = `<div class= "nenhum"> Nenhum produto cadastrado</div>\n`
-            
-            }
-      
-            departamentos.forEach(departamento => {
-
-            let dept = departamento;
-            const formId = departamento.id
-
-              tabela.innerHTML += `
-                <tr class="linha_tabela">
-                  <td>
-                      <input type="hidden" name="id" value="${departamento.id}" form="${formId}">
-                      <input type="number" name="id" value="${departamento.id}" readonly>
-                  </td>
-                  <td>
-                    <input type="text" name="nome" id="nome" value="${departamento.nome}" form="${formId}">
-                  </td>
-                  <td>
-                    <input type="text" name="descricao" id="descricao" value="${departamento.descricao}" form="${formId}">
-                  </td>
-                  <td>
-                    <input type="text" name="whatsapp" id="whatsapp" value="${departamento.whatsapp}" form="${formId}">
-                  </td>
-                  <td>
-                    <img src="${departamento.logo}">
-                    <input type="file" name="novoLogo" id="novoLogo" accept="image/*" form="${formId}">
-                  </td>
-                  <td>
-                    ${departamento.usuario.nome}
-                    <input type="hidden" name="usuario" value="${departamento.usuario.id}" form="${formId}">
-                  </td>
-                  <td>
-                    <form id="${formId}">
-                        <button type="submit">Editar</button>
-                        <button type="button" onclick="deletar_departamento(${departamento.id})">Deletar</button>
-                    </form>
-                  </td>
-                </tr>
-              `
-            })
-           
-          })
-          .then(() => console.log.ok)
-          .catch(err => console.log(err));
-}
-
-function deslistar_departamento(){
-    document.querySelector("#header_departamento").innerHTML = '';
-    document.querySelector("#tabela_departamentos").innerHTML = '';
-
-    
-    document.querySelector('.listar_dept').style.display = 'block';
-    document.querySelector('.deslistar_dept').style.display = 'none';
-}
-
-function deletar_departamento(id) {
-fetch(`http://localhost:8080/departamentos/${id}`, {
-    method: 'DELETE'
-})
-.then(resposta => {
-    if (resposta.ok) {
-        console.log('Departamento deletado com sucesso!');}
-})
-.then(() => listar_departamentos())
-}
 
 function listar_produtos() {
     fetch('http://localhost:8080/produtos')
@@ -144,8 +51,7 @@ function listar_produtos() {
           tabela.innerHTML += `
             <tr class="linha_tabela">
               <td>
-                  <input type="hidden" name="id" value="${produto.id}" form="${formId}">
-                  <input type="number" name="id" value="${produto.id}" readonly>
+                  <input type="number" name="id" value="${produto.id}" readonly form="${formId}">
               </td>
               <td>
                 <input type="text" name="nome" id="nome" value="${produto.nome}" form="${formId}">
@@ -160,20 +66,18 @@ function listar_produtos() {
                 <input type="number" name="estoque" id="estoque" value="${produto.estoque}" form="${formId}">
               </td>
               <td>
-                <input type="text" name="whatsapp" id="whatsapp" value="${produto.departamento.whatsapp}" form="${formId}">
+                <div> ${produto.departamento.whatsapp} </div>
               </td>
               <td>
                 <img src="${produto.foto}">
-                <input type="file" name="novoLogo" id="novoLogo" accept="image/*" form="${formId}">
               </td>
               <td>
                 ${produto.departamento.nome}
-                <input type="hidden" name="usuario" value="${produto.departamento.id}" form="${formId}">
               </td>
               <td>
-                <form id="${formId}">
-                    <button type="submit">Editar</button>
-                    <button type="button" onclick="deletar_produto(${produto.id})">Deletar</button>
+                <form id="${formId}" onsubmit="event.preventDefault(); editarProduto(${produto.id}, this)">
+                    <button type="submit" class="btn" >Editar</button>
+                    <button type="button" class ="btn" onclick="deletar_produto(${produto.id})">Deletar</button>
                 </form>
               </td>
             </tr>
@@ -183,6 +87,25 @@ function listar_produtos() {
       })
       .then(() => console.log.ok)
       .catch(err => console.log(err));
+}
+
+function editarProduto(id, form) {
+  const formData = new FormData(form);
+
+  fetch(`http://localhost:8080/produtos/${id}`, {
+    method: 'PUT', // Ou 'PATCH' dependendo da sua API
+    body: JSON.stringify(formData),
+  })
+  .then(resposta => {
+    if (resposta.ok) {
+      alert('Produto atualizado com sucesso!');
+      listarProdutos(); // Atualiza a lista de produtos
+    } else {
+      console.error('Erro ao atualizar produto:', resposta.status);
+      alert('Erro ao atualizar produto.');
+    }
+  })
+  .catch(erro => console.error('Erro na requisição:', erro));
 }
 
 function deletar_produto(id) {
@@ -274,8 +197,8 @@ function listar_vendas() {
               </td>
               <td>
                 <form id="${formId}">
-                    <button type="submit">Editar</button>
-                    <button type="button" onclick="deletar_venda(${venda.id})">Deletar</button>
+                    <button type="submit" class="btn">Editar</button>
+                    <button type="button" class="btn" onclick="deletar_venda(${venda.id})">Deletar</button>
                 </form>
               </td>
             </tr>
@@ -310,92 +233,3 @@ function deslistar_vendas(){
 
 /*-------------------USUARIOS -----------------------------------*/ 
 
-function listar_usuarios() {
-    fetch('http://localhost:8080/usuarios')
-      .then(resposta => resposta.json())
-      .then(usuarios => {
-
-        const header = document.querySelector("#header_usuario");
-        const tabela = document.querySelector("#tabela_usuarios");
-
-        tabela.innerHTML = '';
-        header.innerHTML = ''; 
-
-        if(usuarios.length >0){
-
-        document.querySelector('.listar_usuarios').style.display = 'none';
-        document.querySelector('.deslistar_usuarios').style.display = 'block';
-
-        header.innerHTML =
-        ` 
-            <td>ID</td>
-            <td>Nome</td>
-            <td>Email</td>
-            <td>CPF</td>
-            <td>Telefone</td>
-            <td>Ações</td>
-        `
-        console.log(usuarios)
-        }else{
-            header.innerHTML = `<div class= "nenhum"> Nenhum usuario cadastrado</div>\n`
-             }
-  
-        usuarios.forEach(usuario => {
-
-        let usu = usuario;
-        console.log(usuario.nome)
-        const formId = usuario.id
-
-          tabela.innerHTML += `
-            <tr class="linha_tabela">
-              <td>
-                  <input type="hidden" name="id" value="${usuario.id}" form="${formId}">
-                  <input type="number" name="id" value="${usuario.id}" readonly>
-              </td>
-              <td>
-                <input type="email" name="email" id="email" value="${usuario.email}" form="${formId}">
-              </td>
-              <td>
-                <input type="text" name="nome" id="nome" value="${usuario.nome}" form="${formId}">
-              </td>
-              <td>
-                <input type="text" name="cpf" id="cpf" value="${usuario.cpf}" form="${formId}">
-              </td>
-              <td>
-                <input type="text" name="contato" id="contato" value="${usuario.cpf}" form="${formId}">
-              </td>
-              
-              <td>
-                <form id="${formId}">
-                    <button type="submit">Editar</button>
-                    <button type="button" onclick="deletar_usuario(${usuario.id})">Deletar</button>
-                </form>
-              </td>
-            </tr>
-          `
-        })
-       
-      })
-      .then(() => console.log.ok)
-      .catch(err => console.log(err));
-}
-
-function deletar_usuario(id) {
-    fetch(`http://localhost:8080/usuarios/${id}`, {
-    method: 'DELETE'
-    })
-    .then(resposta => {
-    if (resposta.ok) {
-        console.log('Usuario deletado com sucesso!');}
-    })
-    .then(() => listar_usuarios())
-    }
-
-function deslistar_usuarios(){
-    document.querySelector("#header_usuario").innerHTML = '';
-    document.querySelector("#tabela_usuarios").innerHTML = '';
-
-    
-    document.querySelector('.listar_usuarios').style.display = 'block';
-    document.querySelector('.deslistar_usuarios').style.display = 'none';
-}
