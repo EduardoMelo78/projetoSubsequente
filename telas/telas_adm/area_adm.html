@@ -17,7 +17,7 @@
                     <p>Em cada clique</p>
                 </h2>
             </a>
-            <div><a href="/telas/usuarios/my_home.html" class="link_header">Voltar à HOME</a></div>
+            <div><a href="/telas/usuarios/my_home.html" class="link_header"><img src="/img/home-page.png" alt=""></a></div>
             <div class="logout "><a href="/telas/usuarios/login.html" class="link_header">Sair</a></div>
         </div>
     </header>
@@ -29,8 +29,9 @@
             </div>
             <div class="botoes">
                 <div class="botao"><a href="/telas/telas_adm/departamento_cadastro.html">Cadastrar</a></div>
-                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
-                    <input type="number" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+
+                <div class="pesquisar"><img src="/img/lupa search.png" alt="" onclick="buscar_departamento()">
+                    <input type="number" placeholder="Pesquisar por id" name="pesquisar_id_departamento" id="pesquisar_departamento" onkeyup="buscar_departamento()">
                 </div>
                 <button type="button" class="botao listar_dept" onclick="listar_departamentos()">Listar</button>
                 <button type="button" class="botao deslistar_dept" onclick="deslistar_departamento()">Deslistar</button>
@@ -50,8 +51,8 @@
             </div>
             <div class="botoes">
                 <div class="botao"><a href="/telas/telas_adm/produto_cadastro.html">Cadastrar</a></div>
-                <div class="pesquisar"><img src="/img/lupa search.png" alt="">
-                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                <div class="pesquisar"><img src="/img/lupa search.png" alt="" onclick="buscar_produto()">
+                    <input type="number" placeholder="Pesquisar por id" name="pesquisar_produto" id="pesquisar_produto" onkeyup="buscar_produto()">
                 </div>
                 <button type="button" class="botao listar_produtos" onclick="listar_produtos()">Listar</button>
                 <button type="button" class="botao deslistar_produtos" onclick="deslistar_produtos()">Deslistar</button>
@@ -62,6 +63,7 @@
                 <tbody id="tabela_produtos"></tbody>
             </table>
             <hr>
+            <script src="/scripts/area_adm_produto.js"></script>
         </div>
 
         <p></p>
@@ -72,7 +74,7 @@
             <div class="botoes">
                 <div class="botao"><a href="/telas/telas_adm/venda_cadastro.html">Cadastrar</a></div>
                 <div class="pesquisar"><img src="/img/lupa search.png" alt="">
-                    <input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisar">
+                    <input type="text" placeholder="Pesquisar" name="pesquisar_venda" id="pesquisar_venda" onkeyup="buscar_venda()">
                 </div>
                 <button type="button" class="botao listar_vendas" onclick="listar_vendas()">Listar</button>
                 <button type="button" class="botao deslistar_vendas" onclick="deslistar_vendas()">Deslistar</button>
@@ -83,6 +85,7 @@
                 <tbody id="tabela_vendas"></tbody>
             </table>
             <hr>
+            <script src="/scripts/area_adm_venda.js"></script>
         </div>
 
         <p></p>
@@ -95,8 +98,8 @@
             </div>
             <div class="botoes">
                 <div class="pesquisar">
-                    <img src="/img/lupa search.png" alt="" onclick="buscar_usuario_id()">
-                    <input type="number" placeholder="Pesquisar por ID" name="pesquisar_id" id="pesquisar_id">
+                    <img src="/img/lupa search.png" alt="">
+                    <input type="number" placeholder="Pesquisar por ID" name="pesquisar_id_usuario" id="pesquisar_id_usuario" onkeyup="buscar_usuario_id()">
                 </div>
                 <button type="button" class="botao listar_usuarios" onclick="listar_usuarios()">Listar</button>
                 <button type="button" class="botao deslistar_usuarios" onclick="deslistar_usuarios()">Deslistar</button>

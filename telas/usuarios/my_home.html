@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Carinho em cada clique</title>
     <link rel="stylesheet" href="/css/myhome.css">
     <link rel="stylesheet" href="/css/myhome_mobile.css">
+    <link rel="stylesheet" href="/css/myhome_produtos.css">
 </head>
 
 <body>
 
-    <!--Navbar-->
     <div class="navbar show_menu">
         <div class="cabecalho">
        
@@ -57,7 +57,7 @@
     <div class="header_bottom">
         <div class="header_esquerda">
             <h2>Mimos que aquecem o coração</h2>
-            <p>Com o proposito de carinho para com os nossos clientes lançamos esta plataforma nova de forma a mimar nossos clientes fiéis, dando-lhes pontos a cada compra que valem desconto.</p>
+            <p>Com o propósito de carinho para com os nossos clientes lançamos esta plataforma nova de forma a mimar nossos clientes fiéis, dando-lhes pontos a cada compra que valem desconto.</p>
             <p>Com nossas lojas parceiras, conseguimos trazer este mimo que ajudam nossos clientes na hora de decidir onde comprar.</p>
             <button><a href="produtos.html">Ver agora &#8594</a></button>
         </div>
@@ -66,18 +66,20 @@
 </header>
 
     <main>
-        
-        <h1>AQUI SERÁ A MAIN</h1>
 
         <div class="home_departamentos">
-        <div>Aqui colocarei até 6 imagens links de departamentos</div>
-        <div><a href="departamentos.html">Aqui será um link para ir a departamentos</a></div>
+        <div><h1>DEPARTAMENTOS</h1></div>
+        <div id="imgs_departamento"></div>
+        <a href="departamentos.html" class="ver_mais">Sobre os departamentos > </a>
         </div>
 
-        <div>
-            <h1>AQUI TERA 1 OU 2 PRODUTOS DE CADA DEPARTAMENTO</h1>
-            <div><a href="produtos.html">Aqui será um link para ir aos produtos</a></div>
+        <div class="home_produtos">
+            <div><h1>PRODUTOS</h1></div>
+            <div class="desc_produto" id="desc_produto"></div>
+            <a href="produtos.html" class="ver_mais">Ver mais > </a>
         </div>
+
+
     </main>
 
     <footer>
@@ -99,6 +101,8 @@
 
 
     <script src="/scripts/my_home.js"></script>
+    <script src="/scripts/my_home_departamentos.js"></script>
+    <script src="/scripts/my_home_produtos.js"></script>
 </body>
 
 </html>

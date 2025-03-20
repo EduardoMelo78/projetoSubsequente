@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&family=Poppins:wght@400;600&display=swap');
 :root {
     --rosa_claro: #fe5cf5;
     --azul-escuro: #000041;
@@ -16,16 +17,19 @@
 }
 
 body {
-    font-family: Tahoma, sans-serif;
+
+    font-family: 'Poppins', sans-serif;
     border: none;
     margin: 0;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-
+h1, h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: var(--azul-escuro);
+  }
 
 .navbar {
     padding: 15px;
@@ -181,6 +185,13 @@ header{
 
 .header_esquerda{
     width: 60%;
+    
+}
+
+
+.header_esquerda p {
+    margin-bottom: 20px; 
+    margin-top: 20px;
 }
 .header_direita img{
     width:  100%;
@@ -226,14 +237,80 @@ main{
     display: flex;
     flex-direction: column;
     background-color: #fe5cf5;
-    padding: 15px;
 }
 
+.home_departamentos {
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--rosa_bebe);
+    
+    
+}
+.home_departamentos a{
+  color: var(--azul-escuro);
+}
+#imgs_departamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+.home_departamentos h1{
+    color: var(--azul-escuro);
+    margin-top: 20px;
+}
 
+#imgs_departamento img{
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+    animation: flutuar 2s ease-in-out infinite;
+    object-fit: cover;
+}
 
+@keyframes flutuar {
+    0% { 
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 
+.home_produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 15px 0px;
+    color: var(--azul-escuro)
+}
+
+.ver_mais {
+    margin: 10px;
+    text-decoration: none;
+    color: var(--azul-escuro);
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+    font-size: larger;
+    font-weight: 600;
+}
+  
+.ver_mais:hover {
+    color: #0056b3;
+  }
 
 footer {
     width: 100%;

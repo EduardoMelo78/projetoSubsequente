@@ -68,6 +68,10 @@ header{
     font-weight: 700;
 }
 
+.link_header img{
+    width: 50px;
+}
+
 main{
 
     width: 65%;

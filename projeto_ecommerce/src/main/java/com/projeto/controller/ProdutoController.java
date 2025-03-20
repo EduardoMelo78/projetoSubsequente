@@ -42,7 +42,7 @@ public class ProdutoController {
 		return service.salvar(produto);
 	}
 	
-	@PutMapping("path/{id}")
+	@PutMapping("/{id}")
 	public ResponseEntity<Produto> atualizar(@PathVariable int id, @RequestBody Produto produto) {
 		
 		return service.buscarPorId(id)

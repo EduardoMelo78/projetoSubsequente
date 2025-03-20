@@ -1,3 +1,13 @@
+:root {
+    --rosa_claro: #fe5cf5;
+    --azul-escuro: #000041;
+    --azul_claro: #2710f2;
+    --azul_bebe: #b7d5e5;
+    --cor_branco: #ffffff;
+    --rosa_bebe: #ffccff;
+    --cinza: #dddddd;
+}
+
 *{
     border: none;
     padding: 0;
@@ -70,6 +80,10 @@ body {
     display: flex;
     justify-content: space-between;
 
+}
+
+.form_header h1{
+    color: var(--azul-escuro);
 }
 
 .form_header h1::after{

@@ -2,11 +2,9 @@ package com.projeto.model;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,11 +30,11 @@ public class Venda {
 	@Enumerated(EnumType.STRING)
     private TipoPagamento tipoPagamento;
 	
-	@ManyToOne (fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn (name = "usuario_id")
 	private Usuario usuario;
 	
-	@ManyToOne (fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn(name = "produto_id")
 	private Produto produto;
 }

@@ -141,7 +141,7 @@ function listar_usuarios() {
   }
   
   function buscar_usuario_id() {
-    const id = document.getElementById('pesquisar_id').value;
+    const id = document.getElementById('pesquisar_id_usuario').value;
   
     if (id === '') {
         alert('Por favor, insira um ID válido.');
@@ -155,6 +155,9 @@ function listar_usuarios() {
                 // Limpa a tabela atual
                 document.querySelector("#header_usuario").innerHTML = '';
                 document.querySelector("#tabela_usuarios").innerHTML = '';
+
+                document.querySelector('.listar_usuarios').style.display = 'none';
+                document.querySelector('.deslistar_usuarios').style.display = 'block';
   
                 // Exibe o cabeçalho da tabela
                 document.querySelector("#header_usuario").innerHTML = `

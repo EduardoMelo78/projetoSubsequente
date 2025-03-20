@@ -66,6 +66,7 @@ body {
 
 .mensagem{
     text-align: center;
+    color: var(--azul-escuro);
 }
 
 .ir_cadastro{

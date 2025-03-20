@@ -21,6 +21,6 @@ function deslogar(){
     window.location.href = "login.html"
 }
 
-if(usuario.usuario == "ADMIN" && usuario.senha == "Edumelo@78"){
+if(usuario.usuario == "ADMIN" && usuario.senha == "Edumelo@78" ){
   document.querySelector("#area_adm").style.display = "block";
 }

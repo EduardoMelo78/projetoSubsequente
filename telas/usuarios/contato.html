@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/myhome.css">
     <link rel="stylesheet" href="/css/myhome_mobile.css">
+    <link rel="stylesheet" href="/css/myhome_contato.css">
 </head>
 <body>
 
@@ -26,8 +27,7 @@
             </nav>
 
             <div class="ola_perfil">
-                <p>olá, nome da pessoa</p>
-                <p>seus pontos(pontos)</p>
+                <p id="nome"></p>
             </div>
 
             <div class="img_nav">
@@ -39,8 +39,8 @@
                     <ul class="lista_opcoes">
                         <li><a href="perfil.html">Perfil</a></li>
                         <li><a href="extrato.html">Extrato</a></li>
-                        <li><a href="/telas/telas_adm/area_adm.html">Área do ADM</a></li>
-                        <li><a href="login.html">Sair</a></li>
+                        <li id="area_adm"><a href="/telas/telas_adm/area_adm.html">Área do ADM</a></li>
+                        <li><a href="login.html" class="logout">Sair</a></li>
                     </ul>
                 </div>
 
@@ -52,9 +52,28 @@
     </div>
 
     <main>
-        <div>
-        <h1>AQUI SERÁ A MAIN</h1>
-        <div>Aqui colocarei email, telefone, e endereço</div>
+
+        <div class="bem_vindo">
+            <h1>Bem-vindo!</h1>
+            <p>Esta é a nossa página de contatos</p>
+        </div>
+    
+        <div class="contatos">
+            <h2>Contatos</h2>
+            <p>Entre em contato conosco:</p>
+            <div>Telefone: <strong>(82) 98135-0920</strong></div>
+            <div>E-mail: <a href="meloedu105@gmail.com">meloedu105@gmail.com</a></div>
+            <div>Endereço: Povoado Campinhos - Pariconha, AL</div>
+        </div>
+
+        <div class="quem_somos">
+            <h2>Quem somos nós</h2>
+            <ul>
+                <li>Somos uma empresa de e-commerce para pequenas famílias.</li>
+                <li>Pensamos na escalabilidade e melhor gerenciamento de negócios familiares.</li>
+                <li>A preço baixo e acessível, tenha um gerenciador de estoque, estantes de produtos, e fácil manipulação.</li>
+                <li>Em breve teremos novidades que ajudarão a fidelizar ainda mais seus clientes.</li>
+            </ul>
         </div>
     </main>
 

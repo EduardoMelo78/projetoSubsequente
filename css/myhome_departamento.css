@@ -1,0 +1,66 @@
+:root {
+    --rosa_claro: #fe5cf5;
+    --azul-escuro: #000041;
+    --azul_claro: #2710f2;
+    --azul_bebe: #b7d5e5;
+    --cor_branco: #ffffff;
+    --rosa_bebe: #ffccff;
+    --cinza: #dddddd;
+}
+main h1{
+    text-align:  center;
+    margin: 20px;
+    color: #000041;
+}
+
+.desc_departamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px
+}
+
+.um_departamento{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: var(--rosa_bebe);
+
+    width: 80%;
+    border: solid 2px var(--azul-escuro);
+    
+}
+
+.div_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.um_departamento img{
+    height: 200px;
+    border-radius: 100%;
+    padding: 10px;
+    
+}
+
+.nome_desc_departamento{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.nome_desc_departamento h2{
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+}
+
+.nome_desc_departamento a{
+    text-decoration: none;
+    color: black;
+}
