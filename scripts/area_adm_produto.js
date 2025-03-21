@@ -172,38 +172,40 @@ function buscar_produto() {
                 const formId = produto.id
                 tabela.innerHTML += `
                 <tr class="linha_tabela">
-                  <td>
-                      <input type="number" name="id" value="${produto.id}" readonly>
-                  </td>
-                  <td>
-                    <input type="text" name="nome" id="nome" value="${produto.nome}">
-                  </td>
-                  <td>
-                    <input type="number" name="valor" id="valor" value="${produto.valor}">
-                  </td>
-                  <td>
-                    <input type="text" name="descricao" id="descricao" value="${produto.descricao}">
-                  </td>
-                  <td>
-                    <input type="number" name="estoque" id="estoque" value="${produto.estoque}">
-                  </td>
-                  <td>
-                    <div> ${produto.departamento.whatsapp} </div>
-                  </td>
-                  <td>
-                    <img src="${produto.foto}">
-                    <input type="hidden" name="foto" id="foto${produto.id}" value = "${produto.foto}">
-                  </td>
-                  <td>
-                    ${produto.departamento.nome}
-                  </td>
-                  <td>
-                    <form id="${formId}" onsubmit="event.preventDefault(); editar_produto('${produto.id}', '${formId}')">
-                        <button type="submit" class="btn" >Editar</button>
-                        <button type="button" class ="btn" onclick="deletar_produto(${produto.id})">Deletar</button>
-                    </form>
-                  </td>
-                </tr>
+              <td>
+                  <input type="number" name="id" value="${produto.id}" readonly>
+              </td>
+              <td>
+                <input type="text" name="nome" id="nome_${produto.id}" value="${produto.nome}">
+              </td>
+              <td>
+                <input type="number" name="valor" id="valor_${produto.id}" value="${produto.valor}">
+              </td>
+              <td>
+                <input type="text" name="descricao" id="descricao_${produto.id}" value="${produto.descricao}">
+              </td>
+              <td>
+                <input type="number" name="estoque" id="estoque_${produto.id}" value="${produto.estoque}">
+                <input type="hidden" name="data_cadastro" id="data_cadastro_${produto.id}" value="${produto.data_cadastro}">
+              </td>
+              <td>
+                <div> ${produto.departamento.whatsapp} </div>
+                <input type="hidden" name="departamento" id="departamento_id_${produto.id}" value="${produto.departamento.id}">
+              </td>
+              <td>
+                <img src="${produto.foto}">
+                <input type="hidden" name="foto" id="foto_${produto.id}" value = "${produto.foto}">
+              </td>
+              <td>
+                ${produto.departamento.nome}
+              </td>
+              <td>
+                <form id="${formId}" onsubmit="event.preventDefault(); editar_produto('${produto.id}', '${formId}')">
+                    <button type="submit" class="btn" >Editar</button>
+                    <button type="button" class ="btn" onclick="deletar_produto(${produto.id})">Deletar</button>
+                </form>
+              </td>
+            </tr>
               `
         } else {
             header.innerHTML = `<div class="nenhum">Nenhum Produto cadastrado</div>`;

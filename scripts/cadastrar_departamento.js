@@ -17,7 +17,7 @@ fileInput.addEventListener('change', function(event) {
   }
 });
 
-document.querySelector("#form_cadastrar_departamento").addEventListener("submit", cadastrar)
+document.querySelector("#form_cadastrar").addEventListener("submit", cadastrar)
 
 function cadastrar(event){
     

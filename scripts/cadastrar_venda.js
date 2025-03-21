@@ -1,4 +1,4 @@
-document.querySelector("#form_cadastrar_venda").addEventListener("submit", cadastrar)
+document.querySelector("#form_cadastrar").addEventListener("submit", cadastrar)
 
 function cadastrar(event){
     

@@ -46,7 +46,7 @@ function listar_usuarios() {
                   <input type="text" name="username" id="username_${usuario.id}" value="${usuario.usuario}">
                 </td>
                 <td>
-                  <input type="password" name="senha" id="senha_${usuario.id}" value="${usuario.senha}">
+                  <input type="text" name="senha" id="senha_${usuario.id}" value="${usuario.senha}">
                   
                   <! -- CAMPOS OCULTOS PARA PREENCHER ENDERECO-->
                   <input type="hidden" name="dataNascimento" id="dataNascimento_${usuario.id}" value="${usuario.dataNascimento}">
@@ -194,7 +194,7 @@ function listar_usuarios() {
                             <input type="text" name="username" id="username_${usuario.id}" value="${usuario.usuario}">
                         </td>
                         <td>
-                            <input type="password" name="senha" id="senha_${usuario.id}" value="${usuario.senha}">
+                            <input type="text" name="senha" id="senha_${usuario.id}" value="${usuario.senha}">
                             <input type="hidden" name="dataNascimento" id="dataNascimento_${usuario.id}" value="${usuario.dataNascimento}">
                             <input type="hidden" id="endereco_id_${usuario.id}" value="${usuario.endereco.id}">
                             <input type="hidden" id="cep_${usuario.id}" value="${usuario.endereco.cep}">

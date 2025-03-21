@@ -1,0 +1,174 @@
+.navbar {
+    padding: 15px;
+    width: 100%;
+    background-color: var(--azul-escuro);
+    box-shadow: 0px 0px 10px var(--azul_claro);
+    
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cabecalho {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1300px;
+}
+
+.cabecalho a {
+    text-decoration: none;
+}
+
+.nome_logo {
+    color: var(--rosa_claro);
+    margin: 8px 0px 10px 0px;
+    font-size: 28px;
+}
+.nome_logo>p {
+    color: #ffffff;
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+nav ul li {
+    color: #ffffff;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+    margin: 0px 6px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#ativo{
+    color: #fe5cf5;
+    font-weight: 700;
+}
+
+
+.ola_perfil {
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: medium;
+    width: 16%;
+}
+
+
+.img_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img_nav img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.lista_opcoes {
+    position: absolute;
+    top: 100%;
+    left: -30px; 
+    background-color: white;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    width: 130px;
+    list-style-type: none; 
+    padding: 10px;
+    margin: 0;
+    
+    display: none; 
+}
+
+.lista_opcoes li {
+    margin: 5px 0; 
+    text-align: center;
+}
+
+.lista_opcoes li a {
+    text-decoration: none;
+    color: #333; 
+}
+
+.opcoes_perfil:hover .lista_opcoes {
+    display: block; 
+    
+}
+
+.lista_opcoes li a:hover{
+    background-color: var(--rosa_claro);
+    color: white;
+}
+
+#area_adm{
+    display: none;
+}
+
+.botao_menu {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--azul-escuro);
+    color: #ffffff;
+    padding: 20px 15px; 
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.footer_left p {
+    margin: 5px 0; 
+    color: #bbbbbb;
+}
+
+.footer_right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_right a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer_right a:hover {
+    color: var(--rosa_claro);
+}
+
+.footer_right span {
+    color: #bbbbbb;
+}

@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
     border: none;
     margin: 0;
 
@@ -22,6 +22,11 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+h1, h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: var(--azul-escuro);
 }
 
 header{
@@ -56,12 +61,20 @@ header{
 .link_header:hover {
     color: var(--rosa_claro);
     font-weight: 700;
+    scale: 1.1;
+}
+
+.link_header img{
+    width: 50px;
+}
+
+.link_header img:hover{
+    scale: 1.1;
 }
 
 main{
     width: 80%;
 }
-
 
 .header{
     color: #000041;
@@ -141,14 +154,14 @@ hr{
 
 .tabela {
     width: 100%;
-    max-height: 400px; /* Ajuste essa altura conforme necessário */
-    overflow-y: auto; /* Mostrar barra de rolagem vertical quando necessário */
-    display: block; /* Para que overflow-y funcione corretamente */
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
     
 }
 
 .tabela thead {
-    position: sticky; /* Mantém o cabeçalho fixo */
+    position: sticky;
     top: 0;
     background-color: #f0f0f0;
 }
@@ -174,7 +187,7 @@ hr{
 }
 
 .tabela img {
-    width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 80px;
     height: auto;
     margin: auto;
 }

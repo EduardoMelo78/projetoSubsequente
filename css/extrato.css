@@ -18,7 +18,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    font-family: Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
     border: none;
     margin: 0;
 
@@ -33,6 +33,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+h1, h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: var(--azul-escuro);
+  }
 
 header{
     height: 12%;
@@ -66,7 +71,18 @@ header{
 .link_header:hover {
     color: var(--rosa_claro);
     font-weight: 700;
+    scale: 1.1;
 }
+
+.link_header img{
+    width: 50px;
+}
+
+.link_header img:hover{
+    scale: 1.1;
+}
+
+
 
 main{
 

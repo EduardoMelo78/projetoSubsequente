@@ -17,13 +17,18 @@
 }
 
 body {
-    font-family: Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: var(--azul-escuro);
 }
 
 
@@ -59,6 +64,14 @@ header{
 .link_header:hover {
     color: var(--rosa_claro);
     font-weight: 700;
+    scale: 1.1;
+}
+
+.link_header img{
+    width: 50px;
+}
+.link_header img:hover{
+    scale: 1.1;
 }
 
 .ir_cadastro{

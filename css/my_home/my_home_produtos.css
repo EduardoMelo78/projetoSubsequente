@@ -8,6 +8,12 @@
     --cinza : #dddddd;
 }
 
+main h1{
+  text-align:  center;
+  margin: 20px;
+  color: #000041;
+}
+
 .desc_produto{
   padding: 20px;
   display: flex;
